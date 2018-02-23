@@ -8,7 +8,7 @@ package model;
  * @Copyright: Copyright (c) 2018
  * @University: University of Nice
  */
-public enum State {
+public enum StateType {
     HEALTHY("healthy"),
     SICK("sick"),
     CONTAGIOUS("contagious"),
@@ -18,7 +18,7 @@ public enum State {
     private String state = "";
 
     //Constructor
-    State(String state) {
+    StateType(String state) {
         this.state = state;
     }
     //Method to change status to String

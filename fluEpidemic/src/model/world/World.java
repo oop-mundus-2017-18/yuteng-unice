@@ -1,4 +1,9 @@
-package model;
+package model.world;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * @Project: fluEpidemic
@@ -10,4 +15,5 @@ package model;
  */
 //map
 public class World {
+
 }

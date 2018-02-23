@@ -1,4 +1,4 @@
-package model;
+package model.living;
 
 /**
  * @Project: fluEpidemic
@@ -8,5 +8,5 @@ package model;
  * @Copyright: Copyright (c) 2018
  * @University: University of Nice
  */
-public class Person {
+public class Pig {
 }

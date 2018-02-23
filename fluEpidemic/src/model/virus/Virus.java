@@ -9,7 +9,7 @@ package model.virus;
  * @University: University of Nice
  */
 public abstract class Virus {
-    protected VirusType name; // Type of the virus
+    protected VirusType name;
 
     //潜伏期:sick but not contagious (days)
     protected int incubationTime;
