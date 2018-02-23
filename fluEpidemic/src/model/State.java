@@ -9,4 +9,20 @@ package model;
  * @University: University of Nice
  */
 public enum State {
+    HEALTHY("healthy"),
+    SICK("sick"),
+    CONTAGIOUS("contagious"),
+    RECOVERING("recovering"),
+    DEAD("dead");
+
+    private String state = "";
+
+    //Constructor
+    State(String state) {
+        this.state = state;
+    }
+    //Method to change status to String
+    public String toString() {
+        return this.state;
+    }
 }
