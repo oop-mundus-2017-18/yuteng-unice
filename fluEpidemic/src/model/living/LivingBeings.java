@@ -1,6 +1,7 @@
 package model.living;
 
 import model.state.StateType;
+import model.virus.H5N1;
 import model.virus.Virus;
 import model.world.Position;
 
@@ -40,7 +41,12 @@ public abstract class LivingBeings {
             //clear map
         }
     }
-
+    public void setContagious() {
+        stateType = StateType.CONTAGIOUS;
+    }
+    public void setVirus(Virus virus) {
+        this.virus = virus;
+    }
     public Position getPosition() {
         return position;
     }

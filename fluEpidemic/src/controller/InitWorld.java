@@ -5,7 +5,6 @@ import model.world.Position;
 import model.world.World;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 import static model.world.World.WORLDSIZE;
@@ -20,9 +19,9 @@ import static model.world.World.WORLDSIZE;
  */
 public class InitWorld {
     World world;
-    public void init() {
+    public static void init() {
         world = new World();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 30; i++) {
             addPerson();
             addPig();
             addChiken();
@@ -30,7 +29,9 @@ public class InitWorld {
         }
         showTheWorld();
         System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        oneDay();
+
+        oneDay();//move position
+        Event.infection(world); // infecter the person
         showTheWorld();
     }
     public void addPerson() {

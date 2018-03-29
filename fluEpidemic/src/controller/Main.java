@@ -1,12 +1,5 @@
 package controller;
 
-import model.living.LivingBeings;
-import model.living.Person;
-import model.world.Position;
-import model.world.World;
-
-import java.util.List;
-
 /**
  * @Project: fluEpidemic
  * @Author: YU Teng
@@ -17,8 +10,6 @@ import java.util.List;
  */
 public class Main {
     public static void main(String... args) {
-        InitWorld initWorld = new InitWorld();
-        initWorld.init();
-
+        InitWorld.init();
     }
 }

@@ -16,7 +16,7 @@ public class H5N1 extends Virus {
         this.recoverTime = 2;
         this.contagiousTime = 2;
 
-        this.mortalityRate = 0.1;
-        this.infectionRate = 0.1;
+        this.mortalityRate = 0.3;
+        this.infectionRate = 0.3;
     }
 }
