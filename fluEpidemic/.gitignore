@@ -1,0 +1,26 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+out/
+.idea/
+
+gen
+
+# Mac
+.DS_Store
+
+# Maven
+target/
+release.properties
+
+# Eclipse
+.classpath
+.project
+.externalToolBuilders/
+.metadata
+.settings
