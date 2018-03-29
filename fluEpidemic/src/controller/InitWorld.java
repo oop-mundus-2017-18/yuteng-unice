@@ -19,7 +19,7 @@ import static model.world.World.WORLDSIZE;
  */
 public class InitWorld {
     World world;
-    public static void init() {
+    public  void init() {
         world = new World();
         for (int i = 0; i < 30; i++) {
             addPerson();
