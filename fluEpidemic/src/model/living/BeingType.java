@@ -22,7 +22,7 @@ public enum BeingType {
     public String toString() {
         return this.being;
     }
-    public boolean isEquals(BeingType being) {
-        return this.being.equalsIgnoreCase(being.toString());
+    public boolean isEquals(BeingType beingType) {
+        return this.being.equalsIgnoreCase(beingType.toString());
     }
 }

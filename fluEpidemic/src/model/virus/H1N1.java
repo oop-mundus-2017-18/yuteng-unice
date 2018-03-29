@@ -12,11 +12,11 @@ public class H1N1 extends Virus {
     public H1N1() {
         this.name = VirusType.H1N1;
 
-        this.incubationTime = 2;
-        this.recoverTime = 4;
-        this.contagiousTime = 6;
+        this.incubationTime = 1;//潜伏期
+        this.recoverTime = 1;//恢复
+        this.contagiousTime = 1;//感染
 
-        this.mortalityRate = 0.9;
-        this.infectionRate = 0.85;
+        this.mortalityRate = 0.5;//死亡率
+        this.infectionRate = 0.5;//感染率
     }
 }

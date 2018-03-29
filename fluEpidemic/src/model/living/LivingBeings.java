@@ -1,6 +1,6 @@
 package model.living;
 
-import model.StateType;
+import model.state.StateType;
 import model.virus.Virus;
 import model.world.Position;
 
@@ -20,12 +20,12 @@ public abstract class LivingBeings {
     Position position;
     boolean alive;
 
-    public LivingBeings(StateType stateType, BeingType type, Position location) {
+    public LivingBeings(StateType stateType, BeingType type, Position position) {
         this.type = type;
         this.virus = null;
         this.alive = true;
         this.stateType = stateType;
-        setPosition(location);
+        setPosition(position);
     }
 
     //check is alive?
@@ -41,7 +41,7 @@ public abstract class LivingBeings {
         }
     }
 
-    Position getLocation() {
+    Position getPosition() {
         return position;
     }
 

@@ -10,7 +10,6 @@ package model.world;
  */
 public class Position
 {
-    // Row and column positions.
     private int row;
     private int col;
 

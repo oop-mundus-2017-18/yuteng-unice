@@ -1,10 +1,8 @@
 package model.example;
 
-import java.util.function.Supplier;
 import java.util.HashMap;
 import java.util.Map;
-import static flu.example.Event.*;
-import static flu.example.State.*;
+import java.util.function.Supplier;
 
 
 /**
@@ -30,14 +28,14 @@ class Transition {
      * Initializes the two-key map.
      * @param virus Determines transition probabilities.
      */
-    Transition(Virus virus) {
-        mortality = virus.mortality();
-        virulence = virus.virulence();
-        put(HEALTHY, CONTACT_WITH_CONTAGIOUS_PERSON,
-                () -> happens(virulence)
-                    ? INFECTED
-                    : HEALTHY);
-    }
+//    Transition(Virus virus) {
+//        mortality = virus.mortality();
+//        virulence = virus.virulence();
+//        put(HEALTHY, CONTACT_WITH_CONTAGIOUS_PERSON,
+//                () -> happens(virulence)
+//                    ? INFECTED
+//                    : HEALTHY);
+//    }
 
     /**
      * Puts a transition function value into the two-key map for given
@@ -67,7 +65,7 @@ class Transition {
     /**
      * Determines the next state from the current state and event
      * keys by executing the transition function.
-     * @param state Key.
+     * @param
      * @param event Key.
      * @return Next state.
      */

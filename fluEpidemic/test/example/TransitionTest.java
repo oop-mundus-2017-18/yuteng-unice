@@ -4,7 +4,7 @@ import javafx.animation.Transition;
 import org.junit.Before;
 import org.junit.Test;
 
-import static model.StateType.HEALTHY;
+import static model.state.StateType.HEALTHY;
 import static org.junit.Assert.*;
 import static flu.example.Event.*;
 import static flu.example.State.*;
