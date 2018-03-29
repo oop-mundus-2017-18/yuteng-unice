@@ -17,7 +17,7 @@ public abstract class LivingBeings {
     BeingType type;
 
     Virus virus;
-    Position position;
+    public Position position;
     boolean alive;
 
     public LivingBeings(StateType stateType, BeingType type, Position position) {
@@ -25,7 +25,7 @@ public abstract class LivingBeings {
         this.virus = null;
         this.alive = true;
         this.stateType = stateType;
-        setPosition(position);
+        this.position = position;
     }
 
     //check is alive?
@@ -41,11 +41,8 @@ public abstract class LivingBeings {
         }
     }
 
-    Position getPosition() {
+    public Position getPosition() {
         return position;
-    }
-
-    void setPosition(Position newPosition) {
     }
 
     public StateType getStateType() {
@@ -60,4 +57,15 @@ public abstract class LivingBeings {
         return type;
     }
 
+    public void show() {
+        System.out.println(" StateType:" + stateType+
+                "\n BeingType: " +type+
+                "\n Position: " + position+
+                "\n alive: "+alive);
+        if (virus != null) {
+            System.out.println(" Virus: " + virus.name);
+        } else {
+            System.out.println(" Virus: null");
+        }
+    }
 }

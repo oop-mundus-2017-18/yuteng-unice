@@ -1,5 +1,9 @@
 package model.world;
 
+import java.util.Random;
+
+import static model.world.World.WORLDSIZE;
+
 /**
  * @Project: fluEpidemic
  * @Author: YU Teng
@@ -43,5 +47,27 @@ public class Position
     public int getCol()
     {
         return col;
+    }
+
+    //9 direction move: 0 not change,1 row,2 col
+    public Position changePosition() {
+        Random random = new Random();
+        int r = random.nextInt(3);
+        if (r == 1) {
+            //0 not change ,1 add ,2 min
+            if (random.nextInt(3)==1 && row + 1 < WORLDSIZE){
+                row++;
+            } else if (random.nextInt(3) == 2 && row - 1 >= 0) {
+                row--;
+            }
+        } else if (r == 2 && col + 1 < WORLDSIZE) {
+            //0 not change ,1 add ,2 min
+            if (random.nextInt(3)==1 && col + 1 < WORLDSIZE){
+                col++;
+            } else if (random.nextInt(3) == 2 && col - 1 >= 0) {
+                col--;
+            }
+        }
+        return this;
     }
 }
