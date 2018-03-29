@@ -28,12 +28,19 @@ public class InitWorld {
             addDuck();
         }
         showTheWorld();
-        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-
-        oneDay();//move position
-        Event.infection(world); // infecter the person
-        showTheWorld();
     }
+
+    public void runTheWorld(int times) {
+        System.out.println("!!!!!!!!!!!!!!! Run The World !!!!!!!!!!!!!!!!!!!!!!");
+        for (int i = 0; i < times; i++) {
+            oneDay();//move position
+            Event.infection(world); // infecter the person
+            Event.died(world);//kill beings
+            Event.recover(world);
+            showTheWorld();
+        }
+    }
+
     public void addPerson() {
         Random random = new Random();
         Position position = new Position(random.nextInt(WORLDSIZE), random.nextInt(WORLDSIZE));

@@ -27,13 +27,31 @@ public class Event {
                     Virus virus = beings.getVirus();
                     for (LivingBeings person : entry.getValue()) {
                         if (person.getType().isEquals(BeingType.PERSON) && person.getStateType() == StateType.HEALTHY) {
-                            Random random = new Random();
-                            double conRate = random.nextInt(10) / 10;
-                            if (conRate < virus.getInfectionRate()) {
+                            if (Math.random() < virus.getInfectionRate()) {
                                 person.setVirus(virus);
                                 person.setContagious();
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    public static void died(World world) {
+        for (List<LivingBeings> beings : world.map.values()) {
+            for (LivingBeings being : beings) {
+                if (being.getStateType() != StateType.HEALTHY && Math.random() < being.getVirus().getMortalityRate()) {
+                    being.setDead();
+                }
+            }
+        }
+    }
+    public static void recover(World world) {
+        for (List<LivingBeings> beings : world.map.values()) {
+            for (LivingBeings being : beings) {
+                if (being.getAlive() && being.getStateType() != StateType.HEALTHY ) {
+                    if (--being.virus.recoverTime == 0) {
+                        being.setStateType(StateType.HEALTHY);
                     }
                 }
             }

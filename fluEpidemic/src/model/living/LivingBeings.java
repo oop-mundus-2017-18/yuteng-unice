@@ -17,7 +17,7 @@ public abstract class LivingBeings {
     StateType stateType;
     BeingType type;
 
-    Virus virus;
+    public Virus virus;
     public Position position;
     boolean alive;
 
@@ -35,7 +35,7 @@ public abstract class LivingBeings {
     }
 
     //die
-    void setDead() {
+    public void setDead() {
         alive = false;
         if (position != null) {
             //clear map
@@ -46,6 +46,10 @@ public abstract class LivingBeings {
     }
     public void setVirus(Virus virus) {
         this.virus = virus;
+    }
+
+    public void setStateType(StateType stateType) {
+        this.stateType = stateType;
     }
     public Position getPosition() {
         return position;
@@ -62,7 +66,9 @@ public abstract class LivingBeings {
     public BeingType getType() {
         return type;
     }
-
+    public boolean getAlive() {
+        return alive;
+    }
     public void show() {
         System.out.println(" StateType:" + stateType+
                 "\n BeingType: " +type+

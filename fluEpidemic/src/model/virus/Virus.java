@@ -16,7 +16,7 @@ public abstract class Virus {
     //被传染: people is contagious
     protected int contagiousTime;
     //恢复:individual is recovering
-    protected int recoverTime;
+    public int recoverTime;
     //感染率:infectionRate
     protected double infectionRate;
     //死亡率
